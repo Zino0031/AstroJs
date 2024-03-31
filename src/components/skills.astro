@@ -1,0 +1,47 @@
+---
+import SkillsList from "~/components/Skills-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { SkillsItem } from "~/types";
+
+const frameworks: Array<SkillsItem> = [
+  {
+    title: "React",
+    icon: "fa-brands:react",
+  },
+  {
+    title: "Js",
+    icon: "mdi:language-javascript",
+  },
+  {
+    title: "Wordpress",
+    icon: "fa-brands:wordpress",
+  },
+  {
+    title: "Figma",
+    icon: "fa-brands:figma",
+  },
+  {
+    title: "Adobe",
+    icon: "fa-brands:adobe",
+  },
+  {
+    title: "Firebase",
+    icon: "mdi:firebase",
+  },
+];
+
+
+---
+
+<ContentSection title="Skills" id="Skills">
+  <Fragment slot="lead">
+    With a robust  <span class="text-primary">skill </span>set spanning{" "}
+    <span class="text-primary">web development & design</span>
+    I deliver innovative solutions that exceed  <span class="text-primary">expectations</span>.
+  </Fragment>
+  <SkillsList
+    items={frameworks}
+    title="Tools"
+  />
+  
+</ContentSection>
